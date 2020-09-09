@@ -1,0 +1,13 @@
+/* The navigation bar */
+.navbar {
+  overflow: auto;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0;
+ /* Position the navbar at the top aof the page */
+  width: 110%; /* Full width */
+  height: 50px;
+  margin-left: -9px;
+  margin-bottom: 50px;
+}
+
