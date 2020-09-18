@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit, Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-searchbox',
@@ -7,16 +7,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 
 export class SearchboxComponent implements OnInit {
-  @Input() tasks = [];
-  @Input() task = ' ';
   constructor() { }
 
   ngOnInit(): void {
   }
-  addTasks(task): void {
-    this.tasks.push(task);
-    console.log(this.tasks);
-    alert('New task is added to your ToDo List!');
-}
 
+  @Output() newTaskEvent = new EventEmitter<string>();
+
+  addNewTask(value: string) {
+    this.newTaskEvent.emit(value);
+    alert(value + " is added to your todo list!!!");
+  }
 }

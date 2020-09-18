@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
 
   constructor() { }
+  tasks = ['First Task'];
 
+
+  addTask(newTask: string) {
+    this.tasks.push(newTask);
+  }
   ngOnInit(): void {
   }
 

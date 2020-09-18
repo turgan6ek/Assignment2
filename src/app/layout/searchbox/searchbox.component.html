@@ -1,9 +1,11 @@
 <div class="mid">
   <h1>ToDo List</h1>
 <form class="form-inline" >
-  <input type="text" id="search" placeholder="New Task" name="name" [(ngModel)]="task">
+  <input type="text" id="search" placeholder="New Task" name="name" #newTask>
 
-  <button (click)='addTasks(task)'  >Add</button>
+  <button (click)='addNewTask(newTask.value)'  >Add</button>
 
 </form>
+
 </div>
+
